@@ -11,7 +11,7 @@ def create_app():
     app = Flask(__name__)
 
     CORS(app)
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:DSM2001dsm*@localhost/genify'
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://genify:g3nify123$@genifydatabase.mysql.database.azure.com/genify'
 
     # Configuration for JWT
     app.config['JWT_SECRET_KEY'] = 'yX*F2wRpE78Ct!LkG$mjQvZpF9p#bS%z'  # Change this to a secret key
