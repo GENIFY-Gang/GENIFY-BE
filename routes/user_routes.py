@@ -47,7 +47,7 @@ def login_user():
         access_token = create_access_token(identity=username, expires_delta=datetime.timedelta(days=1))
         return jsonify({'message': 'Login successful', 'access_token': access_token, 'role': user.role, 'email':user.email})
     else:
-        return jsonify({'error': 'Invalid username or password'}), 401
+        return jsonify({'error': 'Invalid username or password.'}), 401
 
 
 @users_bp.route('/', methods=['POST'])
