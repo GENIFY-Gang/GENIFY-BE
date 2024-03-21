@@ -25,7 +25,7 @@ def update_documentation():
         db.session.add(documentation)
 
     db.session.commit()
-    return jsonify({"message": "Documentation updated successfully"})
+    return jsonify({"message": "Documentation updated successfully."})
 
 @documentation_bp.route('/', methods=['POST'])
 def create_documentation():
