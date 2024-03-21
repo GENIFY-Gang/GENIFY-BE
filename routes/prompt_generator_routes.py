@@ -10,7 +10,7 @@ API_URL = "https://ctagpxdbl3lg09zh.us-east-1.aws.endpoints.huggingface.cloud"
 HEADERS = {
 	"Accept" : "application/json",
 	"Authorization": "Bearer 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",
-	"Content-Type": "application/json"
+	"Content-Type": "application/json" 
 }
 
 def queryTesting(payload):
@@ -48,8 +48,9 @@ def summarize():
             data = request.json
             input_text = data.get('input_text')
             if input_text:
+                input = f"<s>[INST]<<SYS>>{sys_prompt}<</SYS>{input_text}[/INST]"
                 output = query({
-	                            "inputs": f"<s>[INST]<<SYS>>{sys_prompt}<</SYS>{input_text}[/INST]",
+	                            "inputs": input,
 	                            "parameters": {
 		                            "max_new_tokens": 150
 	                            }
