@@ -36,7 +36,7 @@ def summarizeTesting():
                 output = queryTesting({"inputs": input_text})
                 return jsonify(output), 200
             else:
-                return jsonify({'error': 'Input text is required.'}), 400
+                return jsonify({'error': 'Input text is required'}), 400
         except Exception as e:
             return jsonify({'error': str(e)}), 500
         
